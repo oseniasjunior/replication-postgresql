@@ -85,12 +85,8 @@
 @remove-line-for-nolocal@local   all             all                                     @authmethodlocal@
 # IPv4 local connections:
 host    all             all             127.0.0.1/32            @authmethodhost@
-host    all             all             pgworker                @authmethodhost@
-host    all             all             pgmaster                @authmethodhost@
 # IPv6 local connections:
 host    all             all             ::1/128                 @authmethodhost@
-host    all             all             pgworker                @authmethodhost@
-host    all             all             pgmaster                @authmethodhost@
 # Allow replication connections from localhost, by a user with the
 # replication privilege.
 @remove-line-for-nolocal@local   replication     all                                     @authmethodlocal@

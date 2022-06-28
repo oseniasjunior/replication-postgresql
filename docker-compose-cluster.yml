@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+
+  master:
+    image: postgres:master
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=postgres      
+      - POSTGRES_PASSWORD=123456
+    deploy:
+      mode: replicated
+      replicas: 1
+
+  worker:
+    image: postgres:worker
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=postgres      
+      - POSTGRES_PASSWORD=123456
+    deploy:
+      mode: replicated
+      replicas: 1
